@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 app.use(require('body-parser').urlencoded({
     extended: true
 }));
+
 // app.use(require('express-session')({
 //     secret: 'keyboard cat',
 //     resave: false,
@@ -34,7 +35,7 @@ app.use(express.static(__dirname + '/public'));
 app.use('/api', require('../routes/index.routes'));
 
 // Run server
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log('Escuchando en el puerto 3000');
 });
 
