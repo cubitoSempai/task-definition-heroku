@@ -3,7 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const passport = require('passport');
+const path = require('path');
+// const passport = require('passport');
 
 const app = express();
 
@@ -29,7 +30,8 @@ app.use(require('body-parser').urlencoded({
 // app.use(passport.initialize());
 // app.use(passport.session());
 
-app.use(express.static(__dirname + '/public'));
+const public = path.resolve(__dirname, "../public");
+app.use(express.static(public));
 
 //Global configuration for routes
 app.use('/api', require('../routes/index.routes'));
