@@ -2,7 +2,7 @@
 process.env.PORT = process.env.PORT || 3000;
 
 // URL CONNECTION MONGODB
-process.env.URL_DB = 'mongodb+srv://task-definition:BIWICks6DhzuEj6P@cluster0.npidi.mongodb.net/task-definition';
+// process.env.URL_DB = 'mongodb+srv://task-definition:BIWICks6DhzuEj6P@cluster0.npidi.mongodb.net/task-definition';
 
 
 // SEED
