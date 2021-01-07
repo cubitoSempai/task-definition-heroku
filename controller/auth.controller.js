@@ -3,9 +3,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user.model');
 const generateJWT = require('../helpers/jwt');
 const nodemailer = require("nodemailer");
-const {
-    json
-} = require('body-parser');
+
 
 const login = (req, res) => {
     let body = req.body;
